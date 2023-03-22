@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="container">
+      <!--CARDS-->
+      <div class="left-part">
+        <div class="cards">
+          <!--CARD BEHIND -->
+          <div class="card card-back">
+            <img src="images/bg-card-back.png" alt="card back" />
+
+            <p class="card-back__key">000</p>
+          </div>
+          <!--CARD FRONT -->
+          <div class="card card-front">
+            <img src="images/bg-card-front.png" alt="card front" />
+            <img
+              class="card-front__logo"
+              src="images/card-logo.svg"
+              alt="card-logo"
+            />
+            <p class="card-front__number">0000 0000 0000 0000</p>
+            <div class="card-front__details">
+              <p class="card-front__name">Jane Appleseed</p>
+              <p class="card-front__expiration"><span class="month">00</span>/<span class="year">00</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--FORM PART-->
+      <div class="right-part">
+        <form class="form" action="#" autocomplete="off">
+          <label class="form__label" for="text">Cardholder Name</label>
+          <input
+            class="form__input"
+            type="text"
+            name="text"
+            id="text"
+            placeholder="e.g. Jane Appleseed"
+            
+          />
+          <p class="error error__name">sdfbhjkasdhkbh hjkfdsbhksa</p>
+          <label class="form__label" for="card-num">Card Number</label>
+          <input
+            class="form__input"
+            type="text"
+            name="card-num"
+            id="card-num"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength = "19"
+          />
+          <p class="error error__card">sdfbhjkasdhkbh hjkfdsbhksa</p>
+          <div class="form__details">
+            <div class="form__expiration">
+              <label for="mm yy" class="form__label">Exp. Date (MM/YY)</label>
+              <div class="form__exp-items">
+                <input
+                  class="form__input"
+                  type="text"
+                  name="exp"
+                  id="mm"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+                <input
+                  class="form__input"
+                  type="text"
+                  max="999"
+                  name="exp"
+                  id="yy"
+                  placeholder="YY"
+                  maxlength="2"
+                 
+                />
+              </div>
+              <p class="error error__exp">dewafasdfjahsdb</p>
+            </div>
+            <div class="form__cvc">
+              <label class="form__label" for="cvc">CVC</label>
+              <input class="form__input" id="cvc" type="text"  placeholder="e.g. 123" maxlength="3"/>
+              <p class="error error__cvc">dewafasdfjahsdb</p>
+            </div>
+          </div>
+          <button class="btn btn__confirm">Confirm</button>
+        </form>
+        <div class="success">
+          <img
+            class="success__image"
+            src="images/icon-complete.svg"
+            alt="icon-complete"
+          />
+          <div>
+            <h1 class="success__header">Thank you!</h1>
+            <p class="success__text">We've added your card details</p>
+          </div>
+          <button class="btn btn__continue">Continue</button>
+        </div>
+      </div>
+      
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
